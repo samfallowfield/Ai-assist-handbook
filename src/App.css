@@ -50,3 +50,25 @@
   margin: 0;
   font-weight: 400;
 }
+
+#submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#submit-button:hover,
+#submit-button:focus {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+#submit-button:active {
+  background-color: #00408b;
+  transform: translateY(1px);
+}
