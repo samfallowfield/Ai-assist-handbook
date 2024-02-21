@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+#header {
+  background-color: #e2e3e5; /* slightly darker than #f8f9fa */
+  border-bottom: 1px solid #d0d3d7; /* slightly darker than #e9ecef */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+#header-title {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  font-weight: 400;
+}
