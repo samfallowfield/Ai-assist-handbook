@@ -52,7 +52,7 @@
 }
 
 #submit-button {
-  padding: 8px 20px;
+  padding: 9px 20px;
   font-size: 1rem;
   color: #fff;
   background-color: #007bff;
@@ -76,12 +76,23 @@
 #text-input {
   padding: 6px;
   font-size: 1.1rem;
+  border-radius: 8px;
+  margin-right: 8px;
 }
 
-#chat-box{
-  width: 75%;
 
-
+#chat-box {
+  width: 55%;
+  height: 500px; /* Adjust the height as needed */
+  overflow-y: auto;
+  border: 1px solid #b1b1b1;
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  margin: 20px auto;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-width: 2px;
+  border-color: #a0a0a0; /* Darker border for a more professional look */
+  border-radius: 8px; /* Rounded corners for a smoother look */
 }
 
 .Chat-body{
@@ -89,4 +100,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+
+#chat-message-bubble {
+  border: 1px solid #a0a0a0; /* Slightly darker than chat-box's border color */
+  background-color: #f7f7f7; /* Slightly darker than chat-box's lighter background color */
+  padding: 8px;
+  margin: 4px;
+  border-radius: 15px; /* Soft rounded corners for the message bubble */
+  width: fit-content;
 }

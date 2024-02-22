@@ -9,7 +9,9 @@ function App() {
   const [chatHistory, setChathistory] = useState([]);
 
   useEffect(() => {
+    if(userMessage){
     setChathistory((prevChatHistory) => [...prevChatHistory, userMessage]);
+    }
   }, [userMessage]);
 
   // whatever parameter you pass to setChathistory will be equal to the value of chatHistory
