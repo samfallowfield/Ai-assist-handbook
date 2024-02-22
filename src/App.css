@@ -52,7 +52,7 @@
 }
 
 #submit-button {
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 1rem;
   color: #fff;
   background-color: #007bff;
@@ -71,4 +71,22 @@
 #submit-button:active {
   background-color: #00408b;
   transform: translateY(1px);
+}
+
+#text-input {
+  padding: 6px;
+  font-size: 1.1rem;
+}
+
+#chat-box{
+  width: 75%;
+
+
+}
+
+.Chat-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
