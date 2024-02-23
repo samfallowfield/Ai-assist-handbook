@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/Header'
 import InputForm from './components/InputForm'
 import ChatBox from './components/ChatBox'
+import preprompt from './data/preprompts'
 
 function App() {
   const [userMessage, setUserMessage] = useState('')
@@ -11,6 +12,7 @@ function App() {
 
   useEffect(() => {
     if (userMessage) {
+      setChathistory((prevChatHistory) => [...prevChatHistory, userMessage])
       // Set up the headers required by the OpenAI API
       const config = {
         'Content-Type': 'application/json',
@@ -19,8 +21,8 @@ function App() {
       // Define the payload for the API call
       const payload = {
         messages: [
-          { role: 'system', content: 'Always answer in rhymes.' },
-          { role: 'user', content: 'Introduce yourself.' },
+          { role: 'system', content: preprompt },
+          { role: 'user', content: userMessage },
         ],
         temperature: 0.7,
         max_tokens: -1,
@@ -36,13 +38,17 @@ function App() {
       })
         .then((response) => {
           // Handle the response from the API
-          console.log(response.data)
+          setChathistory((prevChatHistory) => [
+            ...prevChatHistory,
+            response.data.choices[0].message.content,
+          ])
+
+          console.log(response.data.choices[0].message.content)
         })
         .catch((error) => {
           // Handle any errors from the API call
           console.error(error)
         })
-      setChathistory((prevChatHistory) => [...prevChatHistory, userMessage])
     }
   }, [userMessage])
 
