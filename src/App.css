@@ -32,14 +32,17 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 #header {
-  background-color: #e2e3e5; /* slightly darker than #f8f9fa */
-  border-bottom: 1px solid #d0d3d7; /* slightly darker than #e9ecef */
+  background-color: #e2e3e5;
+  /* slightly darker than #f8f9fa */
+  border-bottom: 1px solid #d0d3d7;
+  /* slightly darker than #e9ecef */
   padding: 1rem 0;
   text-align: center;
 }
@@ -83,7 +86,8 @@
 
 #chat-box {
   width: 55%;
-  height: 500px; /* Adjust the height as needed */
+  height: 500px;
+  /* Adjust the height as needed */
   overflow-y: auto;
   border: 1px solid #b1b1b1;
   background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
@@ -91,11 +95,13 @@
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-width: 2px;
-  border-color: #a0a0a0; /* Darker border for a more professional look */
-  border-radius: 8px; /* Rounded corners for a smoother look */
+  border-color: #a0a0a0;
+  /* Darker border for a more professional look */
+  border-radius: 8px;
+  /* Rounded corners for a smoother look */
 }
 
-.Chat-body{
+.Chat-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,10 +111,21 @@
 
 
 #chat-message-bubble {
-  border: 1px solid #a0a0a0; /* Slightly darker than chat-box's border color */
-  background-color: #f7f7f7; /* Slightly darker than chat-box's lighter background color */
+  border: 1px solid #a0a0a0;
+  /* Slightly darker than chat-box's border color */
+  background-color: #f7f7f7;
+  /* Slightly darker than chat-box's lighter background color */
   padding: 8px;
   margin: 4px;
-  border-radius: 15px; /* Soft rounded corners for the message bubble */
-  width: fit-content;
+  border-radius: 15px;
+  /* Soft rounded corners for the message bubble */
+  width: 12%;
+}
+
+.userMessage {
+  justify-content: right;
+}
+
+.aiMessage {
+  justify-content: left;
 }

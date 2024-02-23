@@ -1,19 +1,22 @@
 function ChatBox({ chatHistory }) {
   if (chatHistory) {
     return (
-      <div id="chat-box">
+      <div id='chat-box'>
         {chatHistory.map((message, index) => (
-          <p
-            id="chat-message-bubble"
-            key={index}
-            style={{ textAlign: index % 2 === 0 ? "left" : "right" }}
+          <div
+            className={index % 2 === 0 ? 'userMessage' : 'aiMessage'}
+            style={{
+              display: 'flex',
+            }}
           >
-            {message}
-          </p>
+            <p id='chat-message-bubble' key={index} style={{}}>
+              {message}
+            </p>
+          </div>
         ))}
       </div>
-    );
+    )
   }
 }
 
-export default ChatBox;
+export default ChatBox
